@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, MapPin } from 'lucide-react'
+import profileImg from '../assets/profile.jpg'
 
 const GithubIcon = () => (
   <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
@@ -25,102 +26,136 @@ export default function Hero() {
           }} />
       </div>
 
-      <div className="relative w-full max-w-6xl mx-auto text-center pt-20">
-        {/* Status badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full mb-6 sm:mb-8 text-xs sm:text-sm font-medium"
-          style={{ background: 'rgba(34, 211, 238, 0.08)', border: '1px solid rgba(34, 211, 238, 0.2)', color: '#22d3ee' }}
-        >
-          <span className="relative flex h-2 w-2 flex-shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ background: '#22d3ee' }} />
-            <span className="relative inline-flex rounded-full h-2 w-2" style={{ background: '#22d3ee' }} />
-          </span>
-          Available for new opportunities
-        </motion.div>
+      <div className="relative w-full max-w-6xl mx-auto pt-24 pb-12">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
 
-        {/* Main heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-4 sm:mb-6 leading-none"
-        >
-          <span className="text-white">Abdellah</span>
-          <br />
-          <span style={{
-            background: 'linear-gradient(135deg, #22d3ee 0%, #a78bfa 50%, #f472b6 100%)',
-            WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-          }}>
-            AL UOLANTI
-          </span>
-        </motion.h1>
+          {/* Left — text content */}
+          <div className="flex-1 text-center lg:text-left">
+            {/* Status badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full mb-6 text-xs sm:text-sm font-medium"
+              style={{ background: 'rgba(34, 211, 238, 0.08)', border: '1px solid rgba(34, 211, 238, 0.2)', color: '#22d3ee' }}
+            >
+              <span className="relative flex h-2 w-2 flex-shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ background: '#22d3ee' }} />
+                <span className="relative inline-flex rounded-full h-2 w-2" style={{ background: '#22d3ee' }} />
+              </span>
+              Available for new opportunities
+            </motion.div>
 
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25 }}
-          className="text-sm sm:text-lg md:text-xl max-w-2xl mx-auto mb-3 sm:mb-4 leading-relaxed px-2"
-          style={{ color: '#94a3b8' }}
-        >
-          Full-Stack Engineer & DevOps Specialist — building scalable web applications
-          and automating modern deployment infrastructures.
-        </motion.p>
+            {/* Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4 leading-none"
+            >
+              <span className="text-white">Abdellah</span>
+              <br />
+              <span style={{
+                background: 'linear-gradient(135deg, #22d3ee 0%, #a78bfa 50%, #f472b6 100%)',
+                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
+              }}>
+                AL UOLANTI
+              </span>
+            </motion.h1>
 
-        {/* Location */}
-        <motion.div
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
-          className="flex items-center justify-center gap-1 mb-8 sm:mb-10 text-xs sm:text-sm"
-          style={{ color: '#475569' }}
-        >
-          <MapPin size={13} />
-          <span>Tétouan, Morocco</span>
-        </motion.div>
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="text-sm sm:text-base md:text-lg max-w-xl mx-auto lg:mx-0 mb-3 leading-relaxed"
+              style={{ color: '#94a3b8' }}
+            >
+              Full-Stack Engineer & DevOps Specialist — building scalable web applications
+              and automating modern deployment infrastructures.
+            </motion.p>
 
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap gap-3 justify-center mb-10 sm:mb-16 px-2"
-        >
-          <motion.a href="#projects" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
-            className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-slate-900 text-sm"
-            style={{ background: 'linear-gradient(135deg, #22d3ee, #a78bfa)' }}>
-            View Projects
-          </motion.a>
-          <motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
-            className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-sm transition-colors duration-200"
-            style={{ border: '1px solid rgba(51, 65, 85, 1)', color: '#94a3b8', background: 'rgba(30, 41, 59, 0.4)' }}>
-            Contact Me
-          </motion.a>
-          <motion.a href="https://github.com/AbdellahLoulanti" target="_blank" rel="noreferrer"
-            whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
-            className="px-5 py-3 sm:py-3.5 rounded-xl font-semibold text-sm flex items-center gap-2 transition-colors duration-200"
-            style={{ border: '1px solid rgba(51, 65, 85, 1)', color: '#94a3b8', background: 'rgba(30, 41, 59, 0.4)' }}>
-            <GithubIcon /> GitHub
-          </motion.a>
-        </motion.div>
+            {/* Location */}
+            <motion.div
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
+              className="flex items-center justify-center lg:justify-start gap-1 mb-8 text-xs sm:text-sm"
+              style={{ color: '#475569' }}
+            >
+              <MapPin size={13} />
+              <span>Tétouan, Morocco</span>
+            </motion.div>
 
-        {/* Tech badges */}
-        <motion.div
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.55 }}
-          className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 sm:mb-20 px-2"
-        >
-          {techBadges.map((badge, i) => (
-            <motion.span key={badge}
-              initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.55 + i * 0.07 }}
-              whileHover={{ scale: 1.1, y: -2 }}
-              className="px-3 py-1.5 rounded-full text-xs font-mono font-medium"
-              style={{ background: 'rgba(30, 41, 59, 0.6)', border: '1px solid rgba(51, 65, 85, 0.8)', color: '#64748b' }}>
-              {badge}
-            </motion.span>
-          ))}
-        </motion.div>
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8"
+            >
+              <motion.a href="#projects" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
+                className="px-6 py-3 rounded-xl font-semibold text-slate-900 text-sm"
+                style={{ background: 'linear-gradient(135deg, #22d3ee, #a78bfa)' }}>
+                View Projects
+              </motion.a>
+              <motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
+                className="px-6 py-3 rounded-xl font-semibold text-sm transition-colors duration-200"
+                style={{ border: '1px solid rgba(51, 65, 85, 1)', color: '#94a3b8', background: 'rgba(30, 41, 59, 0.4)' }}>
+                Contact Me
+              </motion.a>
+              <motion.a href="https://github.com/AbdellahLoulanti" target="_blank" rel="noreferrer"
+                whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
+                className="px-5 py-3 rounded-xl font-semibold text-sm flex items-center gap-2"
+                style={{ border: '1px solid rgba(51, 65, 85, 1)', color: '#94a3b8', background: 'rgba(30, 41, 59, 0.4)' }}>
+                <GithubIcon /> GitHub
+              </motion.a>
+            </motion.div>
+
+            {/* Tech badges */}
+            <motion.div
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.55 }}
+              className="flex flex-wrap justify-center lg:justify-start gap-2"
+            >
+              {techBadges.map((badge, i) => (
+                <motion.span key={badge}
+                  initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.55 + i * 0.07 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="px-3 py-1.5 rounded-full text-xs font-mono font-medium"
+                  style={{ background: 'rgba(30, 41, 59, 0.6)', border: '1px solid rgba(51, 65, 85, 0.8)', color: '#64748b' }}>
+                  {badge}
+                </motion.span>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Right — profile photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85, x: 40 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="flex-shrink-0 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 relative"
+          >
+            {/* Glow ring */}
+            <div
+              className="absolute inset-0 rounded-2xl blur-2xl opacity-30 scale-105"
+              style={{ background: 'linear-gradient(135deg, #22d3ee, #a78bfa)' }}
+            />
+            {/* Image */}
+            <div className="relative w-full h-full rounded-2xl overflow-hidden"
+              style={{ border: '1px solid rgba(51, 65, 85, 0.6)' }}>
+              <img
+                src={profileImg}
+                alt="Abdellah AL UOLANTI at OpsVoid"
+                className="w-full h-full object-cover object-center"
+                loading="eager"
+              />
+              {/* Subtle overlay gradient at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 h-1/3"
+                style={{ background: 'linear-gradient(to top, rgba(3,7,18,0.6), transparent)' }} />
+            </div>
+          </motion.div>
+
+        </div>
 
         {/* Scroll indicator */}
         <motion.div
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}
-          className="flex flex-col items-center gap-2 pb-8" style={{ color: '#475569' }}
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
+          className="flex flex-col items-center gap-2 mt-16" style={{ color: '#475569' }}
         >
           <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
           <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}>
