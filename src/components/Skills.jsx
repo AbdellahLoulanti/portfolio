@@ -13,7 +13,7 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-32 px-6" style={{ background: 'rgba(15, 23, 42, 0.5)' }}>
+    <section id="skills" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6" style={{ background: 'rgba(15, 23, 42, 0.5)' }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={staggerContainer(0.1)}
@@ -30,7 +30,7 @@ export default function Skills() {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-4xl md:text-5xl font-bold text-white mb-16"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-10 sm:mb-16"
             style={{ letterSpacing: '-0.02em' }}
           >
             Tools & technologies<br />

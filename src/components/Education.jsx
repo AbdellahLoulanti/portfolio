@@ -11,7 +11,7 @@ const languages = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-32 px-6">
+    <section id="education" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={staggerContainer(0.15)}
@@ -22,7 +22,7 @@ export default function Education() {
           <motion.p variants={fadeUp} className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: '#fbbf24' }}>
             Education
           </motion.p>
-          <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold text-white mb-16" style={{ letterSpacing: '-0.02em' }}>
+          <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-10 sm:mb-16" style={{ letterSpacing: '-0.02em' }}>
             Academic background<br />
             <span style={{ color: '#475569' }}>& communication skills</span>
           </motion.h2>

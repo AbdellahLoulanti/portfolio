@@ -47,7 +47,7 @@ const contacts = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 px-6" style={{ background: 'rgba(15, 23, 42, 0.5)' }}>
+    <section id="contact" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6" style={{ background: 'rgba(15, 23, 42, 0.5)' }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={staggerContainer(0.1)}
@@ -58,15 +58,15 @@ export default function Contact() {
           <motion.p variants={fadeUp} className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: '#22d3ee' }}>
             Contact
           </motion.p>
-          <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold text-white mb-6" style={{ letterSpacing: '-0.02em' }}>
+          <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6" style={{ letterSpacing: '-0.02em' }}>
             Let's work together<br />
             <span style={{ color: '#475569' }}>I'm open to new opportunities</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-lg mb-16 max-w-xl" style={{ color: '#64748b' }}>
+          <motion.p variants={fadeUp} className="text-sm sm:text-lg mb-10 sm:mb-16 max-w-xl" style={{ color: '#64748b' }}>
             Whether you have a project in mind, a question, or just want to say hi — my inbox is always open.
           </motion.p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-10 sm:mb-16">
             {contacts.map(({ icon: Icon, label, value, href, color }) => (
               <motion.a
                 key={label}

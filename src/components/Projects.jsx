@@ -43,7 +43,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-32 px-6" style={{ background: 'rgba(15, 23, 42, 0.5)' }}>
+    <section id="projects" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6" style={{ background: 'rgba(15, 23, 42, 0.5)' }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={staggerContainer(0.1)}
@@ -54,7 +54,7 @@ export default function Projects() {
           <motion.p variants={fadeUp} className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: '#34d399' }}>
             Projects
           </motion.p>
-          <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold text-white mb-16" style={{ letterSpacing: '-0.02em' }}>
+          <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-10 sm:mb-16" style={{ letterSpacing: '-0.02em' }}>
             Things I've built<br />
             <span style={{ color: '#475569' }}>with care & craft</span>
           </motion.h2>

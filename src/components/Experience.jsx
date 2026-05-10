@@ -52,8 +52,8 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="experience" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto w-full">
         <motion.div
           variants={staggerContainer(0.15)}
           initial="hidden"
@@ -63,7 +63,7 @@ export default function Experience() {
           <motion.p variants={fadeUp} className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: '#f472b6' }}>
             Experience
           </motion.p>
-          <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold text-white mb-16" style={{ letterSpacing: '-0.02em' }}>
+          <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-10 sm:mb-16" style={{ letterSpacing: '-0.02em' }}>
             Where I've worked<br />
             <span style={{ color: '#475569' }}>& what I've built</span>
           </motion.h2>
@@ -80,7 +80,7 @@ export default function Experience() {
                 <motion.div
                   key={i}
                   variants={slideLeft}
-                  className="sm:pl-20 relative"
+                  className="pl-0 sm:pl-20 relative"
                 >
                   {/* Timeline dot */}
                   <motion.div
@@ -105,7 +105,7 @@ export default function Experience() {
                     }}
                   >
                     {/* Header */}
-                    <div className="flex flex-wrap justify-between items-start gap-3 mb-5">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-3 mb-5">
                       <div>
                         <div className="flex items-center gap-2 mb-1">
                           <Briefcase size={14} style={{ color: exp.color }} />

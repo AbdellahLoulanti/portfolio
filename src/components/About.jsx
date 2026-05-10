@@ -32,7 +32,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="py-32 px-6">
+    <section id="about" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={staggerContainer(0.15)}
@@ -51,14 +51,14 @@ export default function About() {
 
           <motion.h2
             variants={fadeUp}
-            className="text-4xl md:text-5xl font-bold text-white mb-16"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-10 sm:mb-16"
             style={{ letterSpacing: '-0.02em' }}
           >
             Crafting digital experiences<br />
             <span style={{ color: '#475569' }}>with purpose & precision</span>
           </motion.h2>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Bio */}
             <motion.div variants={fadeUp} className="space-y-6">
               <p className="text-lg leading-relaxed" style={{ color: '#94a3b8' }}>
