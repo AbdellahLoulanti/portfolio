@@ -14,25 +14,36 @@
   --text-muted: #475569;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* All base resets go inside @layer base so Tailwind utilities keep priority */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
 
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  width: 100%;
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  ::selection {
+    background: rgba(34, 211, 238, 0.2);
+    color: #22d3ee;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg-primary); }
+  ::-webkit-scrollbar-thumb { background: var(--primary-dark); border-radius: 2px; }
 }
-
-::selection { background: rgba(34, 211, 238, 0.2); color: #22d3ee; }
-
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: var(--primary-dark); border-radius: 2px; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
