@@ -68,8 +68,8 @@ export default function Projects() {
                 transition={{ duration: 0.3, ease: 'easeOut' }}
                 className="group relative flex flex-col rounded-2xl overflow-hidden"
                 style={{
-                  background: 'rgba(30, 41, 59, 0.4)',
-                  border: '1px solid rgba(51, 65, 85, 0.5)',
+                  background: 'rgba(30, 41, 59, 0.95)',
+                  border: '1px solid rgba(71, 85, 105, 0.7)',
                   backdropFilter: 'blur(10px)',
                 }}
               >
@@ -118,7 +118,7 @@ export default function Projects() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center gap-1.5 text-xs font-medium px-3 py-2 rounded-lg transition-colors"
-                      style={{ background: 'rgba(51, 65, 85, 0.5)', color: '#94a3b8', border: '1px solid rgba(71, 85, 105, 0.5)' }}
+                      style={{ background: 'rgba(71, 85, 105, 0.7)', color: '#94a3b8', border: '1px solid rgba(71, 85, 105, 0.5)' }}
                     >
                       <GithubIcon /> Code
                     </motion.a>

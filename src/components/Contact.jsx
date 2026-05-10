@@ -78,8 +78,8 @@ export default function Contact() {
                 whileTap={{ scale: 0.97 }}
                 className="group p-6 rounded-2xl flex flex-col gap-4 transition-all duration-300"
                 style={{
-                  background: 'rgba(30, 41, 59, 0.4)',
-                  border: '1px solid rgba(51, 65, 85, 0.5)',
+                  background: 'rgba(30, 41, 59, 0.95)',
+                  border: '1px solid rgba(71, 85, 105, 0.7)',
                   backdropFilter: 'blur(10px)',
                   textDecoration: 'none',
                 }}

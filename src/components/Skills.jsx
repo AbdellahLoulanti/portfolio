@@ -45,8 +45,8 @@ export default function Skills() {
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="p-6 rounded-2xl group transition-all duration-300"
                 style={{
-                  background: 'rgba(30, 41, 59, 0.4)',
-                  border: '1px solid rgba(51, 65, 85, 0.5)',
+                  background: 'rgba(30, 41, 59, 0.95)',
+                  border: '1px solid rgba(71, 85, 105, 0.7)',
                   backdropFilter: 'blur(10px)',
                 }}
               >

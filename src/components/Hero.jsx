@@ -94,13 +94,13 @@ export default function Hero() {
               </motion.a>
               <motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
                 className="px-6 py-3 rounded-xl font-semibold text-sm transition-colors duration-200"
-                style={{ border: '1px solid rgba(51, 65, 85, 1)', color: '#94a3b8', background: 'rgba(30, 41, 59, 0.4)' }}>
+                style={{ border: '1px solid rgba(51, 65, 85, 1)', color: '#94a3b8', background: 'rgba(30, 41, 59, 0.95)' }}>
                 Contact Me
               </motion.a>
               <motion.a href="https://github.com/AbdellahLoulanti" target="_blank" rel="noreferrer"
                 whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
                 className="px-5 py-3 rounded-xl font-semibold text-sm flex items-center gap-2"
-                style={{ border: '1px solid rgba(51, 65, 85, 1)', color: '#94a3b8', background: 'rgba(30, 41, 59, 0.4)' }}>
+                style={{ border: '1px solid rgba(51, 65, 85, 1)', color: '#94a3b8', background: 'rgba(30, 41, 59, 0.95)' }}>
                 <GithubIcon /> GitHub
               </motion.a>
             </motion.div>

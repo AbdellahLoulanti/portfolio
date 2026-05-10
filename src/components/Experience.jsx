@@ -98,8 +98,8 @@ export default function Experience() {
                     transition={{ duration: 0.2 }}
                     className="p-7 rounded-2xl"
                     style={{
-                      background: 'rgba(30, 41, 59, 0.4)',
-                      border: `1px solid rgba(51, 65, 85, 0.5)`,
+                      background: 'rgba(30, 41, 59, 0.95)',
+                      border: `1px solid rgba(71, 85, 105, 0.7)`,
                       borderLeft: `3px solid ${exp.color}`,
                       backdropFilter: 'blur(10px)',
                     }}

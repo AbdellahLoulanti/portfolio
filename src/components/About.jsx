@@ -104,7 +104,7 @@ export default function About() {
                   className="p-6 rounded-2xl"
                   style={{
                     background: 'rgba(30, 41, 59, 0.5)',
-                    border: '1px solid rgba(51, 65, 85, 0.5)',
+                    border: '1px solid rgba(71, 85, 105, 0.7)',
                     backdropFilter: 'blur(10px)',
                   }}
                 >

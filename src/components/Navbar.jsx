@@ -22,9 +22,9 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed top-0 w-full z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(3, 7, 18, 0.85)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(30, 41, 59, 0.8)' : '1px solid transparent',
+        background: 'rgba(3, 7, 18, 0.92)',
+        backdropFilter: 'blur(20px)',
+        borderBottom: '1px solid rgba(51, 65, 85, 0.6)',
       }}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -51,7 +51,7 @@ export default function Navbar() {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActive(l)}
                 className="relative px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
-                style={{ color: active === l ? '#22d3ee' : '#94a3b8' }}
+                style={{ color: active === l ? '#22d3ee' : '#cbd5e1' }}
               >
                 {active === l && (
                   <motion.span

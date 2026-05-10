@@ -34,8 +34,8 @@ export default function Education() {
               whileHover={{ y: -4 }}
               className="p-8 rounded-2xl"
               style={{
-                background: 'rgba(30, 41, 59, 0.4)',
-                border: '1px solid rgba(51, 65, 85, 0.5)',
+                background: 'rgba(30, 41, 59, 0.95)',
+                border: '1px solid rgba(71, 85, 105, 0.7)',
                 backdropFilter: 'blur(10px)',
               }}
             >
@@ -60,11 +60,11 @@ export default function Education() {
                 algorithms, distributed systems, and modern system architecture.
               </p>
 
-              <div className="mt-6 pt-6" style={{ borderTop: '1px solid rgba(51, 65, 85, 0.5)' }}>
+              <div className="mt-6 pt-6" style={{ borderTop: '1px solid rgba(71, 85, 105, 0.7)' }}>
                 <p className="text-xs font-medium mb-3" style={{ color: '#475569' }}>KEY MODULES</p>
                 <div className="flex flex-wrap gap-2">
                   {['Algorithms', 'Networks', 'Databases', 'DevOps', 'Web Dev', 'AI'].map(m => (
-                    <span key={m} className="px-2.5 py-1 rounded-full text-xs" style={{ background: 'rgba(51, 65, 85, 0.4)', color: '#64748b' }}>
+                    <span key={m} className="px-2.5 py-1 rounded-full text-xs" style={{ background: 'rgba(71, 85, 105, 0.6)', color: '#64748b' }}>
                       {m}
                     </span>
                   ))}
@@ -78,8 +78,8 @@ export default function Education() {
               whileHover={{ y: -4 }}
               className="p-8 rounded-2xl"
               style={{
-                background: 'rgba(30, 41, 59, 0.4)',
-                border: '1px solid rgba(51, 65, 85, 0.5)',
+                background: 'rgba(30, 41, 59, 0.95)',
+                border: '1px solid rgba(71, 85, 105, 0.7)',
                 backdropFilter: 'blur(10px)',
               }}
             >
@@ -102,7 +102,7 @@ export default function Education() {
                         {l.level}
                       </span>
                     </div>
-                    <div className="h-1.5 rounded-full overflow-hidden" style={{ background: 'rgba(51, 65, 85, 0.5)' }}>
+                    <div className="h-1.5 rounded-full overflow-hidden" style={{ background: 'rgba(71, 85, 105, 0.7)' }}>
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${l.pct}%` }}
