@@ -5,18 +5,6 @@ import { X, ChevronLeft, ChevronRight, Workflow, Bot } from 'lucide-react'
 
 const n8nWorkflows = [
   {
-    title: 'Document Upload & Google Drive Sync',
-    description: 'Webhook-triggered workflow that routes uploaded documents into structured Google Drive folders based on business, city, and document type.',
-    tags: ['Webhook', 'Google Drive', 'File Routing'],
-    img: '/automation/n8n-1.jpeg',
-  },
-  {
-    title: 'Drive Folder Structure Initializer',
-    description: 'Auto-creates a nested folder hierarchy (ville → société → sous-dossiers) for each business on first use, ensuring consistent file organization.',
-    tags: ['Webhook', 'Folder Creation', 'Sub-workflows'],
-    img: '/automation/n8n-2.jpeg',
-  },
-  {
     title: 'REQ-025 — Contract Renewal Reminders',
     description: 'Daily scheduler that checks domiciliation contract expiry dates and sends reminder emails at J-60, J-30, J-15, J-3, and expiry day, with automatic task creation.',
     tags: ['Scheduler', 'Email', 'CRM Tasks'],
@@ -27,12 +15,6 @@ const n8nWorkflows = [
     description: 'Twice-weekly audit that scans all companies for missing mandatory fields, generates an Excel report, and emails it to the responsible manager.',
     tags: ['Data Quality', 'Excel Export', 'Email Alert'],
     img: '/automation/n8n-4.jpeg',
-  },
-  {
-    title: 'REQ-028 — Drive Folder Init (Bulk)',
-    description: 'On-demand workflow that loops through all businesses and creates their complete Google Drive accounting folder structures in one execution.',
-    tags: ['Bulk Processing', 'Loop', 'Google Drive'],
-    img: '/automation/n8n-5.jpeg',
   },
   {
     title: 'REQ-006 — Lead Follow-Up Sequence',
@@ -49,24 +31,9 @@ const chatbotScreenshots = [
     img: '/automation/chatbot-1.jpeg',
   },
   {
-    title: 'Opportunity Search Results',
-    description: 'AI-generated list of government contracting opportunities filtered by location, with due dates and direct links.',
-    img: '/automation/chatbot-2.jpeg',
-  },
-  {
-    title: 'Multi-Result View',
-    description: 'Side-by-side opportunity listing with formatted metadata — source, deadlines, and actionable links.',
-    img: '/automation/chatbot-3.jpeg',
-  },
-  {
     title: 'Contract Detail Breakdown',
     description: 'Detailed view of a selected opportunity including agency, NAICS code, contract type, and key dates.',
     img: '/automation/chatbot-4.jpeg',
-  },
-  {
-    title: 'Contextual Follow-Up',
-    description: 'Follow-up query handling — the AI maintains context across turns to refine and expand search results.',
-    img: '/automation/chatbot-5.jpeg',
   },
   {
     title: 'IT Services Opportunity Search',
