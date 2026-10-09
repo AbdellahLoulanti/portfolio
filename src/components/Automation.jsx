@@ -26,18 +26,18 @@ const n8nWorkflows = [
 
 const chatbotScreenshots = [
   {
-    title: 'AI Chatbot Interface',
-    description: 'Clean conversational interface with persistent chat history and real-time government contract search.',
+    title: 'Conversational AI Interface',
+    description: 'Multi-turn chat interface with persistent conversation history, real-time data retrieval, and structured response rendering.',
     img: '/automation/chatbot-1.jpeg',
   },
   {
-    title: 'Contract Detail Breakdown',
-    description: 'Detailed view of a selected opportunity including agency, NAICS code, contract type, and key dates.',
+    title: 'Structured Data Presentation',
+    description: 'AI-formatted results with rich metadata — type, agency, deadlines, and direct action links — generated dynamically from natural language queries.',
     img: '/automation/chatbot-4.jpeg',
   },
   {
-    title: 'IT Services Opportunity Search',
-    description: 'Filtered search by industry sector, returning IT-specific government contracting opportunities.',
+    title: 'Domain-Specific Search',
+    description: 'Context-aware filtering by industry, location, and category — the model narrows results based on prior conversation context.',
     img: '/automation/chatbot-6.jpeg',
   },
 ]
@@ -192,19 +192,19 @@ export default function Automation() {
           <motion.div variants={fadeUp}>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-9 h-9 rounded-xl flex items-center justify-center"
-                style={{ background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.25)' }}>
-                <Bot size={17} style={{ color: '#a78bfa' }} />
+                style={{ background: 'rgba(34,211,238,0.12)', border: '1px solid rgba(34,211,238,0.25)' }}>
+                <Bot size={17} style={{ color: '#22d3ee' }} />
               </div>
               <div>
-                <p className="text-white font-semibold">FGA AI Chatbot</p>
-                <p className="text-xs" style={{ color: '#475569' }}>Government contracting intelligence</p>
+                <p className="text-white font-semibold">AI Chatbot — Client Project</p>
+                <p className="text-xs" style={{ color: '#475569' }}>RAG-powered assistant with real-time data retrieval</p>
               </div>
               <span className="ml-auto text-xs px-2.5 py-1 rounded-full"
-                style={{ background: 'rgba(167,139,250,0.1)', color: '#a78bfa', border: '1px solid rgba(167,139,250,0.2)' }}>
+                style={{ background: 'rgba(34,211,238,0.1)', color: '#22d3ee', border: '1px solid rgba(34,211,238,0.2)' }}>
                 {chatbotScreenshots.length} screens
               </span>
             </div>
-            <GalleryGrid items={chatbotScreenshots} color="#a78bfa" />
+            <GalleryGrid items={chatbotScreenshots} color="#22d3ee" />
           </motion.div>
         </motion.div>
       </div>
