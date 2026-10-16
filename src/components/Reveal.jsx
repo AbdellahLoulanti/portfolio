@@ -7,7 +7,7 @@ export function RevealGroup({ as = 'div', children, stagger = 0.08, ...rest }) {
     <Tag
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '0px 0px 30% 0px' }}
+      viewport={{ once: true, margin: '0px 0px -12% 0px' }}
       variants={{ hidden: {}, visible: { transition: { staggerChildren: stagger } } }}
       {...rest}
     >

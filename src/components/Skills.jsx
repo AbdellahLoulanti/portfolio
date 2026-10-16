@@ -1,13 +1,13 @@
 import { skillGroups } from '../data'
 import { Reveal, RevealGroup } from './Reveal'
-import SectionHead from './SectionHead'
 
 export default function Skills() {
   return (
     <section id="skills" className="skills wrap" aria-labelledby="skills-title">
-      <SectionHead id="skills-title" title="Skills" intro="The tools I use, and where I used each one." />
-      <div className="skills-body">
       <div className="skills-list">
+        <RevealGroup>
+          <Reveal as="h2" id="skills-title">Tools, and where I used them</Reveal>
+        </RevealGroup>
         {skillGroups.map((g) => (
           <RevealGroup key={g.group} className="skill-group" stagger={0.04}>
             <Reveal as="h3">{g.group}</Reveal>
@@ -31,7 +31,6 @@ export default function Skills() {
         />
         <figcaption>A door in the medina, Tétouan. Photo: Yamen, CC BY-SA 4.0.</figcaption>
       </figure>
-      </div>
     </section>
   )
 }

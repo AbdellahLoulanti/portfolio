@@ -1,6 +1,5 @@
 import { person, mailto } from '../data'
 import { Reveal, RevealGroup } from './Reveal'
-import SectionHead from './SectionHead'
 
 const Arrow = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
@@ -11,10 +10,7 @@ const Arrow = () => (
 export default function Contact() {
   const [user, domain] = person.email.split('@')
   return (
-    <section id="contact" className="contact" aria-labelledby="contact-title">
-      <div className="wrap">
-        <SectionHead id="contact-title" title="Contact" intro="Open to roles in AI integration, DevOps and full-stack development. Write to me in English, French or Arabic." />
-      </div>
+    <section id="contact" className="contact" aria-label="Contact">
       <RevealGroup stagger={0.06}>
         <Reveal as="a" className="contact-row" href={mailto}>
           <span>{user}<wbr /><br className="email-break" />@{domain}</span>

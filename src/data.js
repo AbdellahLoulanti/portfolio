@@ -16,16 +16,14 @@ export const person = {
 export const mailto = `mailto:${person.email}?subject=${encodeURIComponent('Hello Abdellah')}`
 
 export const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Work', href: '#work' },
   { label: 'Automation', href: '#automation' },
   { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ]
 
 export const intro = {
-  heading: 'About me',
+  heading: 'Built in Tétouan',
   note:
     'I graduated in computer engineering from ENSA Tétouan in 2025. Since then I have shipped AI chatbots, CI/CD pipelines and n8n automations that real teams use every day.',
   facts: [

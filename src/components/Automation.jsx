@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { workflows } from '../data'
 import { Reveal, RevealGroup } from './Reveal'
-import SectionHead from './SectionHead'
 
 const DAY = 24 * 60 * 60 * 1000
 const OFFSETS = [
@@ -43,7 +42,7 @@ function parseDate(text, today) {
 }
 
 const longDate = (d) =>
-  d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })
+  d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' })
 const plainDate = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
 function Planner() {
@@ -197,17 +196,12 @@ export default function Automation() {
   const close = useCallback(() => setOpen(null), [])
 
   return (
-    <section id="automation" className="automation wrap" aria-labelledby="automation-title">
-      <SectionHead
-        id="automation-title"
-        title="Automation"
-        intro="I automate the repetitive work of a business with n8n and AI. Try one of my real workflows below."
-      />
+    <section id="automation" className="automation wrap" aria-label="Automation">
       <Planner />
 
       <div className="gallery">
         <RevealGroup className="gallery-head">
-          <Reveal as="h3" className="gallery-title">Workflows and a chatbot in production</Reveal>
+          <Reveal as="h2">Workflows and a chatbot</Reveal>
           <Reveal as="p">
             Three n8n workflows and one RAG chatbot I built for clients, all running in production.
             Client names are removed.

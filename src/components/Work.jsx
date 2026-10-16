@@ -1,23 +1,28 @@
+import { folders } from '../data'
 import { Reveal, RevealGroup } from './Reveal'
-import SectionHead from './SectionHead'
 
 // Flat band colours, all from the page palette, so neighbouring folders always differ.
 const bands = [
   { band: '#0d3b26', ink: '#f0f1ec', chip: '#1d5a3c', tab2: '#e2e6df', tab2Ink: '#0d3b26' },
   { band: '#d3dbd1', ink: '#0d3b26', chip: '#e2e6df', tab2: '#0d3b26', tab2Ink: '#f0f1ec' },
   { band: '#17733a', ink: '#f0f1ec', chip: '#0f5f2e', tab2: '#f0f1ec', tab2Ink: '#0d3b26' },
+  { band: '#e2e6df', ink: '#0d3b26', chip: '#d3dbd1', tab2: '#17733a', tab2Ink: '#f0f1ec' },
+  { band: '#0d3b26', ink: '#f0f1ec', chip: '#1d5a3c', tab2: '#d3dbd1', tab2Ink: '#0d3b26' },
+  { band: '#c5d1c3', ink: '#0d3b26', chip: '#e2e6df', tab2: '#0d3b26', tab2Ink: '#f0f1ec' },
 ]
 
 const STRIP = 52
 
-export default function Work({ id, title, intro, items }) {
+export default function Work() {
   return (
-    <section id={id} className="work" aria-labelledby={`${id}-title`}>
+    <section id="work" className="work" aria-labelledby="work-title">
       <div className="wrap">
-        <SectionHead id={`${id}-title`} title={title} intro={intro} />
+        <RevealGroup>
+          <Reveal as="h2" id="work-title" className="work-head">Work so far</Reveal>
+        </RevealGroup>
       </div>
 
-      {items.map((f, i) => {
+      {folders.map((f, i) => {
         const c = bands[i % bands.length]
         return (
           <article
@@ -70,6 +75,7 @@ export default function Work({ id, title, intro, items }) {
           </article>
         )
       })}
+      <div className="work-end" />
     </section>
   )
 }
